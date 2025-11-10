@@ -27,3 +27,12 @@ body {
 .nav-link:hover, .nav-link:active {
     color: #bdbdbd !important;
 }
+
+/* Homepage introduction box styling */
+.home-intro-box {
+    position: absolute; /* position relative to body */
+    right: 0;           /* sticks to the right edge */
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 20px rgb(247, 245, 245, 0.2); /* Set the border shadow */
+}
