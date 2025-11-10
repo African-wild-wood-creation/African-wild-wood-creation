@@ -1,23 +1,28 @@
+/* Set overall background */
 body {
     background-color: #1E0C06;
 }
 
+/* Main heading styling */
 .main-heading {
     color: #fff;
-    font-family: 'Notable', sans-serif;
-    font-weight: 600;
+    font-family: 'Notable', sans-serif; 
+    font-weight: 600; /*Semi Bold */
     text-decoration: none;
 }
 
+/* Main primary background colour */
 .primary-bg {
     background-color: #1E0C06;
 }
 
+/* Default navigation styling */
 .nav-link:link, .nav-link:visited, .nav-link:hover, .nav-link:active {
     color: #fff !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
+/* Hover navigation styling */
 .nav-link:hover, .nav-link:active {
     color: #bdbdbd !important;
 }
