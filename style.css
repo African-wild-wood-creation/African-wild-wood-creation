@@ -4,7 +4,7 @@ body {
 }
 
 /* Main heading styling */
-.main-heading {
+.main-heading:link, .main-heading:visited, .main-heading:hover, .main-heading:active {
     color: #fff;
     font-family: 'Notable', sans-serif; 
     font-weight: 600; /*Semi Bold */
