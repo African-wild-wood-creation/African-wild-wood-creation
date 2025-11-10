@@ -10,5 +10,14 @@ body {
 }
 
 .primary-bg {
-    color: #1E0C06
+    background-color: #1E0C06;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link:hover, .nav-link:active {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.nav-link:hover, .nav-link:active {
+    color: #bdbdbd !important;
 }
