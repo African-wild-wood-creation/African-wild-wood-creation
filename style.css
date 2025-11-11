@@ -32,9 +32,12 @@ body {
 .home-intro-box {
     position: absolute; /* position relative to body */
     right: 0;           /* sticks to the right edge */
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 400px;
     box-shadow: 0 0 20px rgb(247, 245, 245, 0.2); /* Set the border shadow */
+    z-index: 2;
+    background-color: #1E0C06;
+    margin-top: 50px;
 }
 
 /* Homepage introduction text styling */
@@ -46,4 +49,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 
+}
+
+.hero-section {
+    background-image: url("images/home-bg-img.png"); /* background image url */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* scale the image untill it covers the entire section */
+    position: relative; /* make it the reference for absolute positioning */
+    min-height: 100vh;
+    z-index: 1;
 }
