@@ -4,7 +4,7 @@ body {
 }
 
 /* Main heading styling */
-.main-heading:link, .main-heading:visited, .main-heading:hover, .main-heading:active {
+.main-heading:link, .main-heading:visited, .main-heading:hover, .main-heading:active, .heading {
     color: #fff;
     font-family: 'Notable', sans-serif; 
     font-weight: 600; /*Semi Bold */
@@ -44,13 +44,14 @@ body {
 .home-intro-text {
     display: block;
     color: #fff;
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     margin-left: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 
 }
 
+/* Hero section (background image) section styling */
 .hero-section {
     background-image: url("images/home-bg-img.png"); /* background image url */
     background-repeat: no-repeat;
@@ -59,4 +60,11 @@ body {
     position: relative; /* make it the reference for absolute positioning */
     min-height: 100vh;
     z-index: 1;
+    box-shadow: 0 0 40px rgb(247, 245, 245, 0.2);
+}
+
+/* Home introduction box text(grouped) styling */
+.home-intro-grouped-text {
+    margin-left:60px;
+    margin-top: 70px;
 }
