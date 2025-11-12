@@ -7,8 +7,8 @@ body {
 .main-heading:link, .main-heading:visited, .main-heading:hover, .main-heading:active, .heading {
     color: #fff;
     font-family: 'Notable', sans-serif; 
-    font-weight: 600; /*Semi Bold */
     text-decoration: none;
+    font-size: 2.2rem;
 }
 
 /* Main primary background colour */
@@ -21,6 +21,7 @@ body {
     color: #fff !important;
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 /* Hover navigation styling */
@@ -32,19 +33,21 @@ body {
 .home-intro-box {
     position: absolute; /* position relative to body */
     right: 0;           /* sticks to the right edge */
-    width: 600px;
-    height: 400px;
+    width: 50%;
+    height: 75%;
     box-shadow: 0 0 20px rgb(247, 245, 245, 0.2); /* Set the border shadow */
     z-index: 2;
     background-color: #1E0C06;
     margin-top: 50px;
+    border-radius: 15px;
+    margin-top: 5%;
 }
 
 /* Homepage introduction text styling */
 .home-intro-text {
     display: block;
     color: #fff;
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     margin-left: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -65,6 +68,6 @@ body {
 
 /* Home introduction box text(grouped) styling */
 .home-intro-grouped-text {
-    margin-left:60px;
-    margin-top: 70px;
+    margin-left: 10%;
+    margin-top: 15%;
 }
