@@ -71,3 +71,13 @@ body {
     margin-left: 10%;
     margin-top: 15%;
 }
+
+/* section below hero-section (unfinished)*/
+.products-section {
+    min-height: 100vh;
+}
+
+/*footer (unfinished)*/
+footer{
+    color: #fff;
+}
