@@ -79,5 +79,23 @@ body {
 
 /*footer (unfinished)*/
 footer{
+    background-color: rgb(41, 41, 41);
     color: #fff;
+}
+
+.footer-left{
+    /* placeholder */
+}
+
+.footer-right{
+    /* placeholder */
+}
+
+.email-input{
+    /* placeholder */
+}
+
+
+.email-btn{
+    /* placeholder */
 }
