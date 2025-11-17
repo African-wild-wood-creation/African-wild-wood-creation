@@ -77,25 +77,34 @@ body {
     min-height: 100vh;
 }
 
-/*footer (unfinished)*/
+/*footer*/
 footer{
     background-color: rgb(41, 41, 41);
     color: #fff;
 }
 
-.footer-left{
-    /* placeholder */
-}
-
-.footer-right{
-    /* placeholder */
-}
-
+/* text input style */
 .email-input{
     /* placeholder */
 }
 
-
+/* button input style */
 .email-btn{
+    color: white;
     /* placeholder */
+}
+
+/* footer header and links styling */
+.footer-right h6 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: #bdbdbd;
 }
