@@ -131,4 +131,23 @@ footer{
     .home-intro-grouped-text {
         margin: 0;
     }
+      /* FOOTER */
+    footer .row {
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .input-group {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .email-input {
+        width: 70%;
+    }
+
 }
