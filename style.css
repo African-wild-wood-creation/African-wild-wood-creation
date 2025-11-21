@@ -108,3 +108,13 @@ footer{
 .footer-right a:hover {
   color: #bdbdbd;
 }
+
+/*---Mobile Version----*/ 
+@media (max-width: 768px) {
+    /* HERO SECTION */
+    .hero-section {
+        justify-content: center;   /* center on small screens */
+        padding-right: 0;
+        min-height: 70vh;
+    }
+}
