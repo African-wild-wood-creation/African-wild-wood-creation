@@ -220,3 +220,9 @@ footer{
         font-size: 0.9rem;       /* slightly smaller links for tablet */
     }
 }
+/* --- Big Tablets Version --- */
+@media (min-width: 1024px) {
+    .home-intro-box {
+        margin-top: 5%;
+    }
+}
