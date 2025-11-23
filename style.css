@@ -132,6 +132,7 @@ footer{
         display: block;
         margin: 0;
         text-align: right;      /* keep grouped text aligned right */
+        margin-bottom: 30px;
     }
 
     .hero-section {
