@@ -125,13 +125,14 @@ footer{
     .home-intro-text {
         font-size: 1.4rem;      /* smaller so it fits */
         margin-left: 0;         /* remove large left margin */
-        text-align: right;      /* keep aligned to right inside box */  /* prevent overflow */
+        text-align: left;      /* keep aligned to right inside box */
+        margin-left: 5%;
     }
 
     .home-intro-grouped-text {
         display: block;
         margin: 0;
-        text-align: right;      /* keep grouped text aligned right */
+        text-align: left;
         margin-bottom: 30px;
     }
 
@@ -157,4 +158,33 @@ footer{
         width: 70%;
     }
 
+}
+/* --- Tablet Version --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .home-intro-box {
+        width: 55%;        /* intermediate width */
+        right: 0;
+        padding: 20px;   
+        height: auto;  
+        border-radius: 12px;
+        margin-top: 10%;  
+
+    }
+
+    .home-intro-text {
+        font-size: 2.2rem;   /* medium font size */
+        line-height: 1.3;  
+        text-align: left;
+        margin-left: 5%;
+    }
+
+    .home-intro-grouped-text {
+        margin-bottom: 50px;
+    }
+
+    .hero-section {
+        min-height: 70vh; /* slightly shorter than desktop */
+        height: auto;
+    }
 }
