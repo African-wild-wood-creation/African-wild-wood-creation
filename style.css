@@ -187,4 +187,36 @@ footer{
         min-height: 70vh; /* slightly shorter than desktop */
         height: auto;
     }
+    /* FOOTER */
+    footer .row {
+        text-align: left;        /* less centered */
+        justify-content: space-between;
+}
+
+    .footer-left {
+        margin-bottom: 10px;     /* less vertical */
+        text-align: left;        /* align left instead of center */
+    }
+
+    .input-group {
+        width: 60%;              /* smaller than mobile to fit tablet screen */
+        justify-content: flex-start; /* align left inside footer-left */
+    }
+
+    .email-input {
+        width: 70%;              /* maintain reasonable input size */
+    }
+
+    .footer-right {
+        text-align: left;        
+        margin-top: 0;           /* reduce extra spacing */
+    }
+
+    .footer-right h6 {
+        font-size: 1rem;         /* slightly smaller headings for tablet */
+    }
+
+    .footer-right a {
+        font-size: 0.9rem;       /* slightly smaller links for tablet */
+    }
 }
