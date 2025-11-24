@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://www.transparenttextures.com/patterns/wood-pattern.png") repeat;
+    /* Replace the URL above with a more realistic wood plank image if you prefer */
+    background-color: #c1a174; /* warm undertone */
+    background-size: cover;
+    background-attachment: fixed; /* keeps it static while scrolling */
+    font-family: "Segoe UI", sans-serif;
+    color: #2e1f0e;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("https://www.publicdomainpictures.net/pictures/270000/velka/wood-background-1542378553a4d.jpg") center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.9; /* slightly fade so content remains readable */
+}
+
+.enquiry-form {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 35px 45px;
+    background: linear-gradient(145deg, #e5c89b, #cfa36b);
+    border: 2px solid #9b7653;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.enquiry-form h2 {
+    text-align: center;
+    color: #3b2a18;
+    margin-bottom: 25px;
+    font-family: "Georgia", serif;
+}
+
+.enquiry-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #3a2815;
+}
+
+.enquiry-form input[type="text"],
+.enquiry-form input[type="tel"],
+.enquiry-form input[type="email"],
+.enquiry-form input[type="number"],
+.enquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #b48a60;
+    border-radius: 6px;
+    background-color: #f4e3c1;
+    font-size: 15px;
+    color: #3a2815;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+    border-color: #8b6b4b;
+    background-color: #f7ead3;
+    outline: none;
+}
+
+.finish-options {
+    margin-top: 20px;
+    padding: 12px 15px;
+    border: 2px solid #b48a60;
+    border-radius: 8px;
+    background-color: #f4e3c1;
+}
+
+.finish-options legend {
+    font-weight: bold;
+    color: #3a2815;
+}
+
+.finish-options label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.finish-options input[type="radio"] {
+    margin-right: 8px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(135deg, #8b6b4b, #705336);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #a47a53, #8b6b4b);
+}
