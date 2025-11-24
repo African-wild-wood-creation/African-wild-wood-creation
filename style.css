@@ -77,6 +77,10 @@ body {
     min-height: 100vh;
 }
 
+.circle-image{
+    border-radius: 100%;
+}
+
 /*footer*/
 footer{
     background-color: rgb(41, 41, 41);
