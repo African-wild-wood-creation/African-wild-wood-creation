@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-    
+{% extends "base.html" %}
+{% block title %} Contact {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style (2).css') }}">
 <form action="#" method="post" class="enquiry-form">
     
 
@@ -51,6 +44,4 @@
 
     <button type="submit" class="submit-btn">Submit</button>
 </form>
-
-</body>
-</html>
+{% endblock %}
