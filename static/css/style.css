@@ -80,6 +80,47 @@ body {
 .circle-image{
     border-radius: 100%;
 }
+/*--Search bar--- */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between input and button */
+}
+
+/* Search input with icon */
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px; /* extra left padding for icon */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Magnifying glass icon */
+.search-container .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%); /* make the icon vertically algined */
+  font-size: 18px;
+  color: #888;
+}
+
+/* Separate search button */
+.search-button {
+  padding: 12px 24px;
+  background-color: #fff;
+  color: grey;
+  border: none;
+  border-radius: 24px; /*round corners */
+  cursor: pointer;
+  font-size: 16px;
+}
 
 /*footer*/
 footer{
