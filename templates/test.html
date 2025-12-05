@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% block content %}
+{% block title %} Products {% endblock %}
+<style>
+  :root {
+  --dark-brown: #4b2e05;
+  --light-brown: #d2a679;
+  --background: #f3e0c9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--dark-brown);
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-brown);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.cart-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.cart-icon {
+  width: 40px;
+  height: auto;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  margin-left: -10px;
+  font-size: 0.8rem;
+}
+
+.wood-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.wood-card {
+  background: white;
+  border: 2px solid var(--light-brown);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.wood-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wood-image {
+  background: var(--light-brown);
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-brown);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.wood-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wood-card:hover .buttons {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.details-btn,
+.cart-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.details-btn {
+  background: var(--light-brown);
+  color: var(--dark-brown);
+}
+
+.details-btn:hover {
+  background: var(--dark-brown);
+  color: white;
+}
+
+.cart-btn {
+  background: var(--dark-brown);
+  color: white;
+}
+
+.cart-btn:hover {
+  background: var(--light-brown);
+  color: var(--dark-brown);
+}
+
+</style>
+<header>
+  <div class="cart-container">  
+    <img src="cart-image.png.jpg" alt="Cart" class="cart-icon" />
+    <span id="cart-count" class="cart-count"></span>
+  </div>
+  <h1>African Woods & Timber Selection</h1>
+</header>
+<div class="wood-gallery">
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Mahogany</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Teak</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Ebony</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate as needed for scrolling -->
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Rosewood</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Wenge</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<div class="wood-card">
+  <div class="wood-image">Image Placeholder</div>
+  <div class="wood-info">
+    <h2>Okoumé</h2>
+    <p class="price">Price: </p>
+    <div class="buttons">
+      <button class="details-btn">View Details</button>
+      <button class="cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+  let cartCount = 0;
+
+const cartCountEl = document.getElementById('cart-count');
+const addButtons = document.querySelectorAll('.cart-btn');
+
+addButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    cartCount++;
+    updateCartDisplay();
+  });
+});
+
+function updateCartDisplay() {
+  if (cartCount > 0) {
+    cartCountEl.style.display = 'inline-block';
+    cartCountEl.textContent = cartCount;
+  } else {
+    cartCountEl.style.display = 'none';
+  }
+}
+
+</script>
+{% endblock %}

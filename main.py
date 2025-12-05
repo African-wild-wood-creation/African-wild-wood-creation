@@ -15,5 +15,9 @@ def contact():
 def products():
     return render_template("products.html")
 
+@app.route("/products-temp")
+def products_temp():
+    return render_template("test.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
