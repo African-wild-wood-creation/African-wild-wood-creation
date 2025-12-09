@@ -77,6 +77,10 @@ body {
     min-height: 100vh;
 }
 
+.product-section {
+    min-height: 50vh;
+}
+
 .circle-image{
     border-radius: 100%;
 }
