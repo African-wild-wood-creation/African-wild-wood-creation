@@ -18,7 +18,56 @@
 
 <!--WIP-->
 <section class="product-section">
-  
+      <h1 class="heading mt-3 text-center">BEST SELLING ITEMS</h1>
+      <div class="container-fluid row mt-4 mb-5 pb-5">
+
+        <div class="col-md-3 col-sm-6 mb-4"> <!--col-md-3 makes 4 cards per row on med screens and sm-6 is 2 cards -->
+            <div class="card h-100 text-center"> <!-- card is a wrapper that adds a border, rounded corners and shadow -->
+              <!-- h-100 makes the card take up 100% height of its parent column -->
+            <img src="{{ url_for('static', filename='images/Placeholder-3.png') }}" class="card-img-top" alt="Placeholder"> <!-- card-img-top puts the image above the content -->
+            <div class="card-body">
+                <h5 class="card-title">placeholder</h5>
+                <p class="card-text">£250</p>
+                <button class="btn btn-warning">ADD TO CART</button>
+               <!-- card-footer can be used to add links or metadata -->
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card h-100 text-center">
+            <img src="{{ url_for('static', filename='images/Placeholder-3.png') }}" class="card-img-top" alt="Placeholder">
+            <div class="card-body"> <!-- card-body adds spacing inside the card for text and buttons and other elements -->
+                <h5 class="card-title">placeholder</h5> <!-- styles the heading inside the card (bigger and bold) -->
+                <p class="card-text">£250</p> <!-- paragraph styling -->
+                <button class="btn btn-warning">ADD TO CART</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card h-100 text-center">
+            <img src="{{ url_for('static', filename='images/Placeholder-3.png') }}" class="card-img-top" alt="Placeholder">
+            <div class="card-body">
+                <h5 class="card-title">placeholder</h5>
+                <p class="card-text">£250</p>
+                <button class="btn btn-warning">ADD TO CART</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card h-100 text-center">
+            <img src="{{ url_for('static', filename='images/Placeholder-3.png') }}" class="card-img-top" alt="Placeholder">
+            <div class="card-body">
+                <h5 class="card-title">placeholder</h5>
+                <p class="card-text">£250</p>
+                <button class="btn btn-warning">ADD TO CART</button>
+            </div>
+            </div>
+        </div>
+        
+      </div>  
 </section>
 
 {% endblock %}
