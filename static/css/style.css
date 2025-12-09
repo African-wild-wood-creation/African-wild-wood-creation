@@ -125,6 +125,9 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+.search-button:hover{
+    background-color:  #bdbdbd;
+}
 
 /*footer*/
 footer{
