@@ -178,7 +178,7 @@ body {
 }
 
 .img-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* enlarges the image to crete animation like effect */
     cursor: pointer;
 }
 
