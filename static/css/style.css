@@ -258,6 +258,11 @@ footer{
     .hero-section {
         min-height: 60vh;       /* avoid extra vertical scroll */
     }
+    /*--Product page--*/
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile */
+        gap: 20px;
+    }
       /* FOOTER */
     footer .row {
         text-align: center;
