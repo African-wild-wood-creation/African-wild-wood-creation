@@ -129,6 +129,73 @@ body {
     background-color:  #bdbdbd;
 }
 
+/* --- Collection Section Styling --- */
+.collection-section {
+    padding: 40px 5%; /* Adds space above and below */
+    text-align: center;
+    background-color: #1E0C06; 
+}
+
+/* Title Styling */
+.collection-section h2 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.collection-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- The 5-Column Grid --- */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Forces 5 items per row */
+    gap: 40px; 
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* --- Item Cards --- */
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces circle shape */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.img-container:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-name {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
 /*footer*/
 footer{
     background-color: rgb(41, 41, 41);
@@ -169,14 +236,14 @@ footer{
         right: 0;              
         width: 70%;
         height: auto;           /* let height adjust to content */
-        margin-top: 20%;        /* push down a bit */
+        margin-top: 20%;  
         padding: 15px;          /* padding inside box */
         border-radius: 10px;
     }
 
     .home-intro-text {
         font-size: 1.4rem;      /* smaller so it fits */
-        margin-left: 0;         /* remove large left margin */
+        margin-left: 0;
         text-align: left;      /* keep aligned to right inside box */
         margin-left: 5%;
     }
