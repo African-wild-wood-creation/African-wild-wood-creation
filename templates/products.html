@@ -18,40 +18,14 @@
     <h2 class="heading text-center">COLLECTION</h2>
     <div class="collection-wrapper">
         <div class="collection-grid">
+            {% for category in categories %}
             <div class="collection-item">
                 <div class="img-container">
-                    <img src="placeholder.jpg" alt="placeholder">
+                    <img src="{{ url_for('static', filename='images/' ~ category.img_url) }}" alt="{{ category.name }}">
                 </div>
-                <p class="item-name">Placeholder</p>
+                <p class="item-name">{{ category.name }}</p>
             </div>
-
-            <div class="collection-item">
-                <div class="img-container">
-                    <img src="placeholder.jpg" alt="Table">
-                </div>
-                <p class="item-name">Placeholder</p>
-            </div>
-
-            <div class="collection-item">
-                <div class="img-container">
-                    <img src="placeholderr.jpg" alt="placeholder">
-                </div>
-                <p class="item-name">Placeholder</p>
-            </div>
-
-            <div class="collection-item">
-                <div class="img-container">
-                    <img src="placeholder.jpg" alt="placeholder">
-                </div>
-                <p class="item-name">Placeholder</p>
-            </div>
-
-            <div class="collection-item">
-                <div class="img-container">
-                    <img src="placeholder.jpg" alt="placeholder">
-                </div>
-                <p class="item-name">Placeholder</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
