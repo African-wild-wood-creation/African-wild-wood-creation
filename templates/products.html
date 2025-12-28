@@ -23,7 +23,7 @@
                 <div class="img-container">
                     <img src="{{ url_for('static', filename='images/' ~ category.img_url) }}" alt="{{ category.name }}">
                 </div>
-                <p class="item-name">{{ category.name }}</p>
+                <p class="item-name">{{ category.name.capitalize() }}</p>
             </div>
             {% endfor %}
         </div>
