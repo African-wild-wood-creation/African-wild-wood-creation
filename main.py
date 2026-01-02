@@ -27,6 +27,10 @@ def products():
 def products_temp():
     return render_template("test.html")
 
+@app.route("/order")
+def order():
+    return render_template("order.html")
+    
 if __name__ == "__main__":
     if os.environ.get("WERKZEUG_RUN_MAIN") == "true": # creates database only in the main program
         with app.app_context():
