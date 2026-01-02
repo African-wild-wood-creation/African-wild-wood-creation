@@ -19,5 +19,9 @@ def products():
 def products_temp():
     return render_template("test.html")
 
+@app.route("/order")
+def order():
+    return render_template("order.html")
+    
 if __name__ == "__main__":
     app.run(debug=True)
