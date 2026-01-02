@@ -20,34 +20,34 @@
         <div class="collection-grid">
             <div class="collection-item">
                 <div class="img-container">
-                    <img src="placeholder.jpg" alt="placeholder">
+                    <img onclick="window.location.href='{{ url_for('order') }}';" src="placeholder.jpg" alt="placeholder">
                 </div>
                 <p class="item-name">Placeholder</p>
             </div>
 
             <div class="collection-item">
-                <div class="img-container">
+                <div onclick="window.location.href='{{ url_for('order') }}';" class="img-container">
                     <img src="placeholder.jpg" alt="Table">
                 </div>
                 <p class="item-name">Placeholder</p>
             </div>
 
             <div class="collection-item">
-                <div class="img-container">
+                <div onclick="window.location.href='{{ url_for('order') }}';" class="img-container">
                     <img src="placeholderr.jpg" alt="placeholder">
                 </div>
                 <p class="item-name">Placeholder</p>
             </div>
 
             <div class="collection-item">
-                <div class="img-container">
+                <div onclick="window.location.href='{{ url_for('order') }}';" class="img-container">
                     <img src="placeholder.jpg" alt="placeholder">
                 </div>
                 <p class="item-name">Placeholder</p>
             </div>
 
             <div class="collection-item">
-                <div class="img-container">
+                <div onclick="window.location.href='{{ url_for('order') }}';" class="img-container">
                     <img src="placeholder.jpg" alt="placeholder">
                 </div>
                 <p class="item-name">Placeholder</p>
@@ -64,7 +64,7 @@
         <div class="col-md-3 col-sm-6 mb-4"> <!--col-md-3 makes 4 cards per row on med screens and sm-6 is 2 cards -->
             <div class="card h-100 text-center"> <!-- card is a wrapper that adds a border, rounded corners and shadow -->
               <!-- h-100 makes the card take up 100% height of its parent column -->
-            <img src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top" alt="Placeholder"> <!-- card-img-top puts the image above the content -->
+            <img onclick="window.location.href='{{ url_for('order') }}';" src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top cursor-pointer"" alt="Placeholder"> <!-- card-img-top puts the image above the content -->
             <div class="card-body">
                 <h5 class="card-title">placeholder</h5>
                 <p class="card-text">£250</p>
@@ -76,7 +76,7 @@
 
         <div class="col-md-3 col-sm-6 mb-4">
             <div class="card h-100 text-center">
-            <img src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top" alt="Placeholder">
+            <img onclick="window.location.href='{{ url_for('order') }}';" src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top cursor-pointer"" alt="Placeholder">
             <div class="card-body"> <!-- card-body adds spacing inside the card for text and buttons and other elements -->
                 <h5 class="card-title">placeholder</h5> <!-- styles the heading inside the card (bigger and bold) -->
                 <p class="card-text">£250</p> <!-- paragraph styling -->
@@ -87,7 +87,7 @@
 
         <div class="col-md-3 col-sm-6 mb-4">
             <div class="card h-100 text-center">
-            <img src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top" alt="Placeholder">
+            <img onclick="window.location.href='{{ url_for('order') }}';" src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top cursor-pointer"" alt="Placeholder">
             <div class="card-body">
                 <h5 class="card-title">placeholder</h5>
                 <p class="card-text">£250</p>
@@ -98,7 +98,7 @@
 
         <div class="col-md-3 col-sm-6 mb-4">
             <div class="card h-100 text-center">
-            <img src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top" alt="Placeholder">
+            <img onclick="window.location.href='{{ url_for('order') }}';" src="{{ url_for('static', filename='images/Placeholder-3.png.png') }}" class="card-img-top cursor-pointer"" alt="Placeholder">
             <div class="card-body">
                 <h5 class="card-title">placeholder</h5>
                 <p class="card-text">£250</p>
