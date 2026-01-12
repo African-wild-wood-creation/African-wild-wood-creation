@@ -21,7 +21,7 @@
             {% for category in categories %}
             <div class="collection-item">
                 <div class="img-container">
-                    <img src="{{ url_for('static', filename='images/' ~ category.img_url) }}" alt="{{ category.name }}">
+                    <a href="{{ url_for('products_by_category', category_slug=category.slug) }}"> <img src="{{ url_for('static', filename='images/' ~ category.img_url) }}" alt="{{ category.name }}"> </a>
                 </div>
                 <p class="item-name">{{ category.name.capitalize() }}</p>
             </div>

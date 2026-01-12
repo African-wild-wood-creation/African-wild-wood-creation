@@ -23,6 +23,12 @@ def products():
     product_categories = ProductCategories.query.all()
     return render_template("products.html", categories=product_categories)
 
+@app.route("/products/<string:category_slug>")
+def products_by_category(category_slug):
+    category = ProductCategories.query.filter_by(slug=category_slug).first()
+    products = category.products
+    return render_template("category.html", category=category, products=products)
+
 @app.route("/products-temp")
 def products_temp():
     return render_template("test.html")
@@ -37,6 +43,7 @@ if __name__ == "__main__":
             db.create_all()
             categories = ["tables", "clocks", "mirrors", "lights", "shelves", "coat hangers", "support legs", "signs", "trays", "wine racks", "wood"]
             for category in categories:
-                db.session.add(ProductCategories(name=category, img_url=f"{category}_category.png"))
+                slug = category.replace(" ", "-").lower()
+                db.session.add(ProductCategories(name=category, img_url=f"{category}_category.png", slug=slug))
             db.session.commit() # creates databse
     app.run(debug=True)
