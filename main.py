@@ -1,10 +1,38 @@
 from flask import Flask, render_template
 from extensions import db
 import os
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+GMAIL_USER = "awwtest6@gmail.com" # the email that will hold the info
+GMAIL_APP_PASSWORD = "yhwo fcsr woyj zrpf"  # Gmail app password
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db" # initialise sql alchemy databse path
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+
+def send_email(subject, to_email, html_body):
+    msg = MIMEMultipart("alternative")
+    msg["From"] = GMAIL_USER
+    msg["To"] = to_email
+    msg["Subject"] = subject
+
+    # Attach HTML body
+    msg.attach(MIMEText(html_body, "html"))
+
+    try:
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(GMAIL_USER, GMAIL_APP_PASSWORD)
+        server.send_message(msg)
+        server.quit()
+        print("Email sent successfully!")
+        return True
+    except Exception as e:
+        print(f"Failed to send email: {e}")
+        return False
 
 db.init_app(app)
 
@@ -33,8 +61,42 @@ def products_by_category(category_slug):
 def products_temp():
     return render_template("test.html")
 
-@app.route("/order")
+@app.route("/order", methods=["GET", "POST"])
 def order():
+    if request.method == "POST":
+        name = request.form["nm"]
+        phone = request.form["num"]
+        email = request.form["email"] # users email
+        address = request.form["addr"]
+        creation = request.form["creatxt"]
+        picnum = request.form["catpicnum"]
+        dimensions = request.form["dim"]
+        wood = request.form["prefwood"]
+        finish = request.form["finish"]
+        suggests = request.form["suggests"]
+
+        html_body = f"""
+        <h2>New Order Request</h2>
+        <p><strong>Name:</strong> {name}</p>
+        <p><strong>Phone:</strong> {phone}</p>
+        <p><strong>Email:</strong> {email}</p>
+        <p><strong>Address:</strong> {address}</p>
+        <p><strong>Creation Interested In:</strong> {creation}</p>
+        <p><strong>Catalogue Picture Number:</strong> {picnum}</p>
+        <p><strong>Dimensions:</strong> {dimensions}</p>
+        <p><strong>Preferred Wood:</strong> {wood}</p>
+        <p><strong>Preferred Finish:</strong> {finish}</p>
+        <p><strong>Suggestions:</strong><br>{suggests}</p>
+        """
+
+        send_email(
+            subject="New Order Request",
+            to_email="placeholder", # who it will be sent to (kens email)
+            html_body=html_body
+        )
+
+        return render_template("order.html", success=True)
+
     return render_template("order.html")
     
 if __name__ == "__main__":
