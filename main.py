@@ -12,7 +12,6 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db" # initialise sql alchemy databse path
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-
 def send_email(subject, to_email, html_body):
     msg = MIMEMultipart("alternative")
     msg["From"] = GMAIL_USER
