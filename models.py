@@ -7,6 +7,8 @@ class ProductCategories(db.Model):
     category_id = db.Column(db.Integer, primary_key=True, nullable=False, unique=True)
     name = db.Column(db.String(100), nullable=False)
     img_url = db.Column(db.String(200), nullable=False)
+    slug = db.Column(db.String(100), nullable=False, unique=True)
+    
     products = db.relationship("Products", backref="category")
 
 class Products(db.Model):
