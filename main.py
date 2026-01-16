@@ -90,7 +90,7 @@ def order():
 
         send_email(
             subject="New Order Request",
-            to_email="placeholder", # who it will be sent to (kens email)
+            to_email="africanwildwood@gmail.com", # who it will be sent to (kens email)
             html_body=html_body
         )
 
