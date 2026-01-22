@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from extensions import db
 import os
 import smtplib
@@ -43,7 +43,7 @@ def home():
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-        if request.method == "POST":
+    if request.method == "POST":
         name = request.form["nm"]
         phone = request.form["num"]
         email = request.form["email"] # users email
@@ -76,7 +76,7 @@ def contact():
         )
 
         return render_template("Contact.html", success=True)
-    
+
     return render_template("Contact.html")
 
 @app.route("/products")
