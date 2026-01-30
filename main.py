@@ -132,13 +132,5 @@ def order():
 
     return render_template("order.html")
     
-if __name__ == "__main__":
-    if os.environ.get("WERKZEUG_RUN_MAIN") == "true": # creates database only in the main program
-        with app.app_context():
-            db.create_all()
-            categories = ["tables", "clocks", "mirrors", "lights", "shelves", "coat hangers", "support legs", "signs", "trays", "wine racks", "wood"]
-            for category in categories:
-                slug = category.replace(" ", "-").lower()
-                db.session.add(ProductCategories(name=category, img_url=f"{category}_category.png", slug=slug))
-            db.session.commit() # creates databse
+if __name__ == "__main__":           
     app.run(debug=True)
