@@ -40,7 +40,7 @@ with app.app_context():
 
     # ---- create products  ----
     products = {
-        "table": 10,
+        "table": 9,
         "clock": 6,
         "light": 2,
         "mirror": 2,
