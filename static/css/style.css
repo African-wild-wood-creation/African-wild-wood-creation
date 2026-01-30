@@ -199,6 +199,72 @@ body {
     cursor: pointer;
 }
 
+/* CATEGORY PRODUCT GRID STYLES  */
+
+/* Product Card */
+.category-product-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image container */
+.category-product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.category-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Title */
+.category-product-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #000;
+}
+/* Price */
+.category-product-price {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Button */
+.category-add-btn {
+    background-color: #ff9800;
+    color: #000;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 6px 10px;
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+.category-add-btn:hover {
+    background-color: #e68900;
+    color: #000;
+}
+
+
 /*footer*/
 footer{
     background-color: rgb(41, 41, 41);
@@ -356,4 +422,11 @@ footer{
     .home-intro-box {
         margin-top: 5%;
     }
+}
+
+@media (min-width: 1200px) {
+.col-xl-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
 }
