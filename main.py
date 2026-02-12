@@ -136,5 +136,32 @@ def order():
 def cart():
     return render_template("cart.html")
 
+@app.route("/add-to-cart/<int:product_id>")
+def add_to_cart(product_id):
+    product = Products.query.get_or_404(product_id)
+
+    if "cart" not in session:
+        session["cart"] = []
+
+    cart = session["cart"]
+
+    # Check if item already in cart
+    for item in cart:
+        if item["product_id"] == product.product_id:
+            item["quantity"] += 1
+            break
+    else:
+        cart.append({
+            "product_id": product.product_id,
+            "name": product.name,
+            "price": float(product.price),
+            "quantity": 1
+        })
+
+    session["cart"] = cart
+    session.modified = True
+
+    return redirect(request.referrer or url_for("products"))
+
 if __name__ == "__main__":           
     app.run(debug=True)
