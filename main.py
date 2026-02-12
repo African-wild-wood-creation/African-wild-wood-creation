@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, session
 from extensions import db
 import os
 import smtplib
@@ -131,6 +131,10 @@ def order():
         return render_template("order.html", success=True)
 
     return render_template("order.html")
-    
+
+@app.route("/cart")
+def cart():
+    return render_template("cart.html")
+
 if __name__ == "__main__":           
     app.run(debug=True)
