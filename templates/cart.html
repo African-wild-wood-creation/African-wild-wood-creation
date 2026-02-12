@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Your Cart{% endblock %}
+
+{% block content %}
+<section class="product-section">
+    <div class="container mt-5">
+
+        <h1 class="heading text-center mb-4">Your Cart</h1>
+
+        {% if cart %}
+
+        <div class="cart-wrapper">
+
+            {% for item in cart %}
+            <div class="cart-item">
+
+                <div class="cart-item-left">
+                    <h6 class="cart-item-name">{{ item.name }}</h6>
+                    <p class="cart-item-price">£{{ item.price }} × {{ item.quantity }}</p>
+                </div>
+
+                <div class="cart-item-right">
+                    <p class="cart-item-subtotal">
+                        £{{ item.price * item.quantity }}
+                    </p>
+
+                    <a href="{{ url_for('remove_from_cart', product_id=item.product_id) }}"
+                       class="cart-remove-btn">
+                        Remove
+                    </a>
+                </div>
+
+            </div>
+            {% endfor %}
+
+            <div class="cart-total-box">
+                <span>Total</span>
+                <span>£{{ total }}</span>
+            </div>
+
+            <div class="cart-actions">
+                <a href="{{ url_for('products') }}" class="cart-secondary-btn">
+                    Continue Shopping
+                </a>
+
+                <a href="{{ url_for('order') }}" class="cart-primary-btn">
+                    Proceed to Order
+                </a>
+            </div>
+
+        </div>
+
+        {% else %}
+            <p class="text-center text-white mt-5">
+                Your cart is empty.
+            </p>
+        {% endif %}
+
+    </div>
+</section>
+{% endblock %}
