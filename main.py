@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from extensions import db
 import os
+from  dotenv import load_dotenv
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -9,8 +10,12 @@ GMAIL_USER = "awwtest6@gmail.com" # the email that will hold the info
 GMAIL_APP_PASSWORD = "yhwo fcsr woyj zrpf"  # Gmail app password
 
 app = Flask(__name__)
+
+
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db" # initialise sql alchemy databse path
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+load_dotenv() # loads the .env file
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
 def send_email(subject, to_email, html_body):
     msg = MIMEMultipart("alternative")
