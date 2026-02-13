@@ -412,6 +412,52 @@ footer{
         flex-direction: column;
     }
 }
+/* ================= FLASH MESSAGES ================= */
+
+.flash-wrapper {
+    position: fixed;
+    top: 80px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Base flash style */
+.flash-message {
+    min-width: 260px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    animation: slideIn 0.4s ease forwards;
+}
+
+/* Success (Add to cart) */
+.flash-success {
+    background-color: #ff9800;
+}
+
+/* Danger (Remove) */
+.flash-danger {
+    background-color: #b23b3b;
+    color: #fff;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 /* footer header and links styling */
 .footer-right h6 {
@@ -427,6 +473,7 @@ footer{
 .footer-right a:hover {
   color: #bdbdbd;
 }
+
 
 /*---Mobile Version----*/ 
 @media (max-width: 768px) {
@@ -481,6 +528,17 @@ footer{
     .email-input {
         width: 70%;
     }
+        .flash-wrapper {
+        right: 10px;
+        left: 10px;
+        top: 70px;
+    }
+
+    .flash-message {
+        width: 100%;
+        text-align: center;
+    }
+    
 
 }
 /* --- Tablet Version --- */

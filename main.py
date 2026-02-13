@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 from extensions import db
 import os
 from  dotenv import load_dotenv
@@ -154,10 +154,10 @@ def add_to_cart(product_id):
 
     cart = session["cart"]
 
-    # Check if item already in cart
     for item in cart:
         if item["product_id"] == product.product_id:
             item["quantity"] += 1
+            flash(f"Added another {product.name} to your cart.", "success")
             break
     else:
         cart.append({
@@ -166,20 +166,30 @@ def add_to_cart(product_id):
             "price": float(product.price),
             "quantity": 1
         })
+        flash(f"{product.name} added to your cart.", "success")
 
     session["cart"] = cart
     session.modified = True
 
     return redirect(request.referrer or url_for("products"))
 
+
 @app.route("/remove-from-cart/<int:product_id>")
 def remove_from_cart(product_id):
     cart = session.get("cart", [])
+
+    removed_item = next(
+        (item for item in cart if item["product_id"] == product_id),
+        None
+    )
 
     cart = [item for item in cart if item["product_id"] != product_id]
 
     session["cart"] = cart
     session.modified = True
+
+    if removed_item:
+        flash(f"{removed_item['name']} removed from your cart.", "danger")
 
     return redirect(url_for("cart"))
 
