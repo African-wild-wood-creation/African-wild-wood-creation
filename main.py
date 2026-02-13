@@ -167,5 +167,17 @@ def add_to_cart(product_id):
 
     return redirect(request.referrer or url_for("products"))
 
+@app.route("/remove-from-cart/<int:product_id>")
+def remove_from_cart(product_id):
+    cart = session.get("cart", [])
+
+    cart = [item for item in cart if item["product_id"] != product_id]
+
+    session["cart"] = cart
+    session.modified = True
+
+    return redirect(url_for("cart"))
+
+
 if __name__ == "__main__":           
     app.run(debug=True)
