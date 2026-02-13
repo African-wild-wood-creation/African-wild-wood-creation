@@ -134,7 +134,11 @@ def order():
 
 @app.route("/cart")
 def cart():
-    return render_template("cart.html")
+    cart = session.get("cart", [])
+
+    total = sum(item["price"] * item["quantity"] for item in cart)
+
+    return render_template("cart.html", cart=cart, total=total)
 
 @app.route("/add-to-cart/<int:product_id>")
 def add_to_cart(product_id):

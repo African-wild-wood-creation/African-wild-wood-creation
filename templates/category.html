@@ -35,9 +35,11 @@
           £{{ product.price }}
         </p>
 
-        <button class="btn category-add-btn">
-          Add to Cart
-        </button>
+      <a href="{{ url_for('add_to_cart', product_id=product.product_id) }}" 
+        class="btn category-add-btn">
+        Add to Cart
+      </a>
+
 
       </div>
     </div>
